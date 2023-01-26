@@ -2,6 +2,7 @@
 using namespace std;
 
 int conjeturaDeCollatz(int n, int &cantPasos){
+    cout << n << " ";
     if (n == 1){
         return cantPasos + 1;
     }
@@ -19,12 +20,14 @@ int conjeturaDeCollatz(int n, int &cantPasos){
 
 int main() {
     int x = 0;
-    cout << "Ingrese el primer para a: " << endl;
+    cout << "Ingrese el numero para calcular la conjetura de Collatz: " << endl;
     cin >> x;
     
     int cantPasos;
+    cout << "La sucesion es: ";
     conjeturaDeCollatz(x,cantPasos);
     
-    cout << "El resultado es " << cantPasos << " " << x << endl;
+    cout << " " << endl;
+    cout << "La cantidad de pasos es: " << cantPasos << " " << endl;
     return 0;
 }
